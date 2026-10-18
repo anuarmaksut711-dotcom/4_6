@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Pixel в Астане: реальные фотографии клуба, три зала, цены и план визита. Круглосуточно.">
+<title>План визита | Pixel</title>
+<link rel="icon" href="assets/pixel/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/Anuar.css">
+<link rel="stylesheet" href="css/premium.css?v=12">
+<script src="js/main.js" defer></script>
+<script src="js/packages.js?v=6" defer>
+</script>
+<script src="js/package-pricing.js?v=1" defer></script>
+<script src="js/booking-delivery.js?v=1" defer></script>
+<script src="js/booking.js?v=12" defer>
+</script>
+<link rel="stylesheet" href="css/portal.css?v=5">
+</head>
+<body class="pixel-booking-page"><a class="visually-hidden-focusable pixel-skip" href="#main-content">Перейти к содержимому</a>
+<header class="pixel-site-header">
+<div class="container premium-header"><a class="pixel-brand" href="index.html" aria-label="Компьютерный клуб Pixel — главная">PIXEL<span>_</span></a><span class="club-location">Астана · 24/7</span>
+<nav aria-label="Основная навигация"><a href="index.html">Главная</a><a href="rooms.html">Залы и цены</a><a href="games.html">Игры</a><a href="booking.html" aria-current="page">План визита</a>
+</nav>
+</div>
+</header>
+<main id="main-content" tabindex="-1">
+<div class="container booking-heading">
+<h1>Ваш план визита</h1>
+<p>Рассчитайте визит и отправьте заявку. Места подтвердит клуб.</p>
+<p id="booking-delivery-state" class="form-text" role="status">Проверяем возможность отправки заявки…</p>
+<button id="booking-show-saved" class="text-button" type="button" hidden>Открыть сохранённый план</button>
+</div>
+<div class="container">
+<section id="booking-result" class="saved-plan" aria-labelledby="booking-result-title" hidden>
+<div id="booking-success" class="success-message" hidden>
+<p>План сохранён только в этом браузере. Клуб не получил заявку, реальные места не зарезервированы.</p>
+</div>
+<h2 id="booking-result-title" tabindex="-1">Сохранённый план</h2>
+<dl id="booking-saved-review" class="review-list"></dl>
+<div id="booking-saved-price" class="saved-price"></div>
+<div class="saved-actions">
+<button id="booking-copy" class="btn btn-primary" type="button" disabled>Скопировать детали</button>
+<button id="booking-edit" class="btn btn-outline-light" type="button">Изменить план</button>
+</div>
+<details id="booking-copy-details" class="manual-copy">
+<summary>Текст плана для копирования</summary>
+<label for="booking-summary" class="visually-hidden">Детали сохранённого плана</label>
+<textarea id="booking-summary" class="form-control" rows="14" readonly></textarea>
+</details>
+<button id="booking-cancel" class="text-button" type="button">Удалить копию с устройства</button>
+<p id="booking-cancel-note" class="form-text" hidden>Удаление копии не отменяет заявку. Для изменения или отмены свяжитесь с клубом.</p>
+<p class="summary-address">Pixel · Астана, проспект Мәңгілік Ел, 36</p>
+<a class="text-link" href="help.html">Помощь перед визитом →</a>
+</section>
+<p id="booking-status" class="form-text booking-status" role="status" aria-live="polite"></p>
+<noscript>
+<p>Для расчёта включите JavaScript или свяжитесь с клубом: <a href="tel:+77753513693">+7 775 351 36 93</a>.</p>
+</noscript>
+<div class="booking-layout">
+<form id="booking-form" autocomplete="off" novalidate>
+<div id="booking-errors" class="field-error-summary" role="alert" tabindex="-1" hidden>
+</div>
+<fieldset>
+<legend>Зал и компания</legend>
+<div class="form-grid">
+<div>
+<label for="booking-room">Какой зал?</label>
+<select id="booking-room" name="room" class="form-select" required aria-describedby="booking-room-help">
+                    <option value="standard" selected>Standard · 900 ₸ / ПК / ч</option>
+                    <option value="duo">Duo · 1 000 ₸ / ПК / ч</option>
+                    <option value="vip">VIP · 1 500 ₸ / ПК / ч</option>
+                  </select>
+<p id="booking-room-help" class="form-text"><span id="room-capacity-note">20 ПК · RTX 4060 · 280 Гц</span> · <a href="rooms.html">Сравнить залы</a>
+</p>
+</div>
+<div>
+<label for="booking-guests">Сколько игроков?</label>
+<input id="booking-guests" class="form-control" type="number" min="1" max="20" step="1" value="1" required inputmode="numeric" aria-describedby="booking-guests-help booking-guests-error">
+<p id="booking-guests-help" class="form-text">Один компьютер на одного игрока.</p>
+<p id="booking-guests-error" class="field-error" hidden>
+</p>
+</div>
+</div>
+<div id="booking-nearby-wrap" class="form-check" hidden>
+<input id="booking-nearby" class="form-check-input" type="checkbox">
+<label for="booking-nearby" class="form-check-label">Хотим сидеть рядом</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Когда играем?</legend>
+<div class="form-grid visit-time-grid">
+<div>
+<label for="booking-date">Дата визита</label>
+<input id="booking-date" class="form-control" type="date" required aria-describedby="booking-date-error">
+<p id="booking-date-error" class="field-error" hidden>
+</p>
+</div>
+<div>
+<label for="booking-time">Время начала</label>
+<input id="booking-time" class="form-control" type="time" required aria-describedby="booking-time-help booking-time-error">
+<p id="booking-time-error" class="field-error" hidden>
+</p>
+</div>
+<div id="booking-duration-wrap">
+<label for="booking-duration">На сколько часов?</label>
+<input id="booking-duration" class="form-control duration-input" type="number" min="1" max="12" step="1" value="2" required inputmode="numeric" aria-describedby="booking-duration-help booking-duration-error">
+<p id="booking-duration-help" class="form-text">От 1 до 12 часов.</p>
+<p id="booking-duration-error" class="field-error" hidden>
+</p>
+</div>
+</div>
+<p id="booking-time-help" class="form-text">Время Астаны. Открыто круглосуточно.</p>
+</fieldset>
+<fieldset id="packages">
+<legend>Стоимость визита</legend>
+<label for="booking-mode">Способ расчёта</label>
+<select id="booking-mode" class="form-select" aria-describedby="booking-mode-hint booking-mode-error">
+<option value="hourly">Почасовой тариф</option>
+<option value="packages">Пакет · предварительный расчёт</option>
+</select>
+<p id="booking-mode-hint" class="form-text">
+</p>
+<p id="booking-mode-error" class="field-error" hidden>
+</p>
+<div id="booking-package-wrap" hidden>
+<label for="booking-package">Пакет для каждого игрока</label>
+<select id="booking-package" class="form-select" aria-describedby="booking-package-condition booking-package-error"></select>
+<p id="booking-package-condition" class="form-text"></p>
+<p id="booking-package-error" class="field-error" hidden></p>
+</div>
+<details id="package-picker" class="package-reference">
+<summary>Прайс и опубликованные условия пакетов</summary>
+<div class="package-boundary"><p>Цены взяты из прайса клуба. Полное покрытие визита считается по модели сайта выше. До подтверждения администратором сумма предварительная.</p><a class="text-link" href="tel:+77753513693">Уточнить условия: +7 775 351 36 93</a><button id="booking-use-hourly" type="button" class="btn btn-outline-light">Продолжить с почасовым тарифом</button></div>
+<div id="package-options">
+</div>
+<p id="package-selection-status" role="status" aria-live="polite">
+</p>
+<div id="other-room-packages" hidden>
+</div>
+<details class="equipment-details">
+<summary>Условия пакетов и скидок</summary>
+<p>Пакеты на 3 и 5 часов не сгорают 96 часов. «Ночь» во всех залах — 22:00–08:00. «Дневной» Standard — пн–пт, 12:00–18:00.</p>
+<p><a href="https://2gis.kz/astana/firm/70000001081269255/tab/prices" target="_blank" rel="noopener noreferrer">Прайс клуба в 2ГИС <span class="visually-hidden">(новая вкладка)</span></a> · <a href="https://www.instagram.com/stories/highlights/18092482690550884/" target="_blank" rel="noopener noreferrer">Прайс в Instagram <span class="visually-hidden">(новая вкладка)</span></a> · <a href="https://pixelcyberclub.aqulas.me/" target="_blank" rel="noopener noreferrer">Официальная страница клуба <span class="visually-hidden">(новая вкладка)</span></a></p>
+<a href="help.html#help-packages">Подробнее о пакетах и скидках →</a>
+</details>
+</details>
+</fieldset>
+<details id="preferences" class="preferences">
+<summary>Пожелания к месту и игре <span>Необязательно</span>
+</summary>
+<div>
+<label for="booking-seat">Предпочтительный компьютер</label>
+<select id="booking-seat" name="seat" class="form-select" aria-describedby="booking-seat-help">
+                        <option value="" selected>Любой компьютер в выбранном зале</option>
+                        <optgroup label="Standard">
+                          <option value="pc-01">ПК 01</option>
+                          <option value="pc-02">ПК 02</option>
+                          <option value="pc-03">ПК 03</option>
+                          <option value="pc-04">ПК 04</option>
+                          <option value="pc-05">ПК 05</option>
+                          <option value="pc-06">ПК 06</option>
+                          <option value="pc-07">ПК 07</option>
+                          <option value="pc-08">ПК 08</option>
+                          <option value="pc-09">ПК 09</option>
+                          <option value="pc-10">ПК 10</option>
+                          <option value="pc-11">ПК 11</option>
+                          <option value="pc-12">ПК 12</option>
+                          <option value="pc-13">ПК 13</option>
+                          <option value="pc-14">ПК 14</option>
+                          <option value="pc-15">ПК 15</option>
+                          <option value="pc-16">ПК 16</option>
+                          <option value="pc-17">ПК 17</option>
+                          <option value="pc-18">ПК 18</option>
+                          <option value="pc-19">ПК 19</option>
+                          <option value="pc-20">ПК 20</option>
+                        </optgroup>
+                        <optgroup label="Duo">
+                          <option value="duo-01">DUO 01</option>
+                          <option value="duo-02">DUO 02</option>
+                        </optgroup>
+                        <optgroup label="VIP">
+                          <option value="vip-01">VIP 01</option>
+                          <option value="vip-02">VIP 02</option>
+                          <option value="vip-03">VIP 03</option>
+                          <option value="vip-04">VIP 04</option>
+                          <option value="vip-05">VIP 05</option>
+                        </optgroup>
+                      </select>
+<p id="booking-seat-help" class="form-text">ПК и места рядом — пожелания. Посадку подтвердит клуб.</p>
+<label for="booking-game">Во что хотите играть?</label>
+<select id="booking-game" name="game" class="form-select" aria-describedby="booking-game-help">
+                        <option value="" selected>Пока не выбрали</option>
+                        <option value="cs2">Counter-Strike 2</option>
+                        <option value="fortnite">Fortnite</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="dota2">Dota 2</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="gtav">GTA V</option>
+                        <option value="gtaonline">GTA Online</option>
+                        <option value="pubg">PUBG</option>
+                        <option value="apex">Apex Legends</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="rust">Rust</option>
+                        <option value="roblox">Roblox</option>
+                        <option value="fc">EA Sports FC</option>
+                        <option value="cod">Call of Duty</option>
+                        <option value="r6">Rainbow Six Siege</option>
+                        <option value="overwatch2">Overwatch 2</option>
+                        <option value="rocketleague">Rocket League</option>
+                        <option value="warthunder">War Thunder</option>
+                        <option value="ets2">Euro Truck Simulator 2</option>
+                        <option value="chrome">Google Chrome</option>
+                      </select>
+<p id="booking-game-help" class="form-text">Доступность игры и необходимость своего аккаунта уточните перед визитом.</p>
+</div>
+</details>
+<fieldset id="booking-contact-fields">
+<legend>Как с вами связаться?</legend>
+<div class="form-grid">
+<div>
+<label for="booking-name">Ваше имя</label>
+<input id="booking-name" name="name" class="form-control" type="text" required minlength="2" maxlength="80" autocomplete="name" aria-describedby="booking-name-error">
+<p id="booking-name-error" class="field-error" hidden></p>
+</div>
+<div>
+<label for="booking-phone">Телефон</label>
+<input id="booking-phone" name="phone" class="form-control" type="tel" required maxlength="32" inputmode="tel" autocomplete="tel" placeholder="+7 700 000 00 00" aria-describedby="booking-phone-help booking-phone-error">
+<p id="booking-phone-error" class="field-error" hidden></p>
+</div>
+</div>
+<p id="booking-phone-help" class="form-text">Администратор получит имя, телефон и план. Контакты в браузере не сохраняются. <a href="help.html">Об отправке и оплате</a></p>
+</fieldset>
+<div class="booking-actions">
+<button id="booking-submit" class="btn btn-primary" type="submit" disabled>Отправить заявку</button>
+<button id="booking-reset" class="text-button" type="button" disabled>Сбросить параметры</button>
+</div>
+<p class="form-text">Оплаты на сайте нет. Подтверждение — по телефону.</p>
+</form>
+<div class="summary-column">
+<aside class="visit-summary" aria-labelledby="booking-call-title" id="visit-review">
+<h2 id="booking-call-title" tabindex="-1">Проверьте ваш визит</h2>
+<dl id="booking-review" class="review-list">
+</dl>
+<div class="summary-price"><span id="booking-total-label">Стоимость сеанса</span>
+<p id="booking-package-formula" class="package-formula" hidden></p>
+<output id="booking-total" for="booking-room booking-guests booking-duration">—</output>
+<p id="booking-price-note" class="form-text">
+</p>
+</div>
+<p id="booking-end" hidden>
+</p>
+<section id="booking-packages-section" hidden>
+<h3 class="visually-hidden">Детали пакетного расчёта</h3>
+<dl id="booking-cart-items" class="review-list package-facts"></dl>
+<p id="booking-cart-note" class="form-text">
+</p>
+<details class="package-method">
+<summary>Как посчитали</summary>
+<p id="booking-package-math"></p>
+<p id="booking-package-model">Модель сайта: один пакет на ПК; время вне покрытия — почасово, с округлением вверх до часа. Остаток не зачтён на будущие визиты. Дальнейшее использование остатка подтвердит клуб.</p>
+</details>
+</section>
+<p class="summary-address">Pixel · Мәңгілік Ел, 36</p>
+<div id="booking-review-actions" class="review-actions" hidden>
+<button id="booking-review-submit" class="btn btn-primary" form="booking-form" type="submit">Отправить заявку</button>
+<button id="booking-back" class="text-button" type="button">Вернуться к параметрам</button>
+<p class="form-text">Отправим имя, телефон и план администратору. Места подтвердит клуб.</p>
+</div>
+</aside>
+<div class="booking-contact">
+<p>Для реального визита администратор подтвердит места и условия.</p><a id="booking-call" href="tel:+77753513693">+7 775 351 36 93</a><a href="help.html">Помощь перед визитом →</a>
+</div>
+</div>
+</div>
+</div>
+<div id="booking-mobile-next" hidden><div><span id="booking-mobile-label">Стоимость сеанса</span><strong id="booking-mobile-total">—</strong></div>
+<button id="booking-mobile-submit" form="booking-form" type="submit" class="btn btn-primary" disabled>Проверить план →</button>
+</div>
+</main>
+<footer class="pixel-site-footer" id="contact">
+<div class="container premium-footer">
+<div><a class="pixel-brand" href="index.html">PIXEL<span>_</span></a>
+<p>Место для вашей игры.</p>
+<p class="small">© 2026 Компьютерный клуб Pixel</p>
+</div>
+<div>
+<h2>Заглядывайте в любое время</h2><address>Астана, проспект Мәңгілік Ел, 36</address>
+<p>Круглосуточно, каждый день</p><a href="https://2gis.kz/astana/firm/70000001081269255" target="_blank" rel="noopener noreferrer">Маршрут в 2ГИС <span class="visually-hidden">(новая вкладка)</span></a>
+</div>
+<div>
+<h2>На связи</h2><a class="footer-phone" href="tel:+77753513693">+7 775 351 36 93</a><a href="help.html">Перед первым визитом</a><a href="https://www.instagram.com/pixel.cyberclub/" target="_blank" rel="noopener noreferrer">Instagram <span class="visually-hidden">(новая вкладка)</span></a><a href="mailto:barmal066@gmail.com">barmal066@gmail.com</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

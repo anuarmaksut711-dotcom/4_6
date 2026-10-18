@@ -1,0 +1,9 @@
+/env/
+/.env
+/var/
+__pycache__/
+*.pyc
+*.log
+.env.*
+!.env.example
+/node_modules/

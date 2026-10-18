@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Pixel в Астане: реальные фотографии клуба, три зала, цены и план визита. Круглосуточно.">
+<title>Игры и приложения | Pixel</title>
+<link rel="icon" href="assets/pixel/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/Anuar.css">
+<link rel="stylesheet" href="css/premium.css?v=13">
+<script src="js/main.js" defer></script>
+<script src="js/packages.js" defer></script>
+<script src="js/games.js" defer>
+</script>
+<link rel="stylesheet" href="css/portal.css?v=5">
+</head>
+<body class="pixel-games-page"><a class="visually-hidden-focusable pixel-skip" href="#main-content">Перейти к содержимому</a>
+<header class="pixel-site-header">
+<div class="container premium-header"><a class="pixel-brand" href="index.html" aria-label="Компьютерный клуб Pixel — главная">PIXEL<span>_</span></a><span class="club-location">Астана · 24/7</span>
+<nav aria-label="Основная навигация"><a href="index.html">Главная</a><a href="rooms.html">Залы и цены</a><a href="games.html" aria-current="page">Игры</a><a href="booking.html">План визита</a>
+</nav>
+</div>
+</header>
+<main id="main-content" tabindex="-1">
+      <header class="container pixel-price-intro">
+<h1 class="mb-2">Во что играем?</h1>
+<p class="text-body-secondary mb-3">Найдите свою игру и добавьте её к плану визита. В каталоге — 19 игр и 1 приложение.</p>
+</header>
+      <section class="container" aria-label="Список игр и приложений">
+        <div id="games-tools" class="pixel-game-tools mb-3" hidden>
+          <div class="row g-3 align-items-end">
+            <div class="col-12 col-md-6">
+              <label for="games-search" class="form-label">Поиск по названию</label>
+              <input id="games-search" class="form-control" type="search" placeholder="Например, CS2 или Minecraft" maxlength="80" autocomplete="off" aria-controls="games-list apps-list" aria-describedby="games-filter-help">
+            </div>
+            <div class="col-12 col-md-4">
+              <label for="games-category" class="form-label">Жанр</label>
+              <select id="games-category" class="form-select" aria-controls="games-list apps-list">
+                <option value="all">Все жанры</option>
+                <option value="shooters">Шутеры</option>
+                <option value="battle-royale">Королевская битва</option>
+                <option value="sandbox">Песочницы и выживание</option>
+                <option value="moba">Командные стратегии (MOBA)</option>
+                <option value="action">Экшен</option>
+                <option value="sports-simulation">Спорт и симуляторы</option>
+                <option value="apps">Приложения</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-2">
+              <button id="games-reset" class="btn btn-outline-light" type="button">Сбросить</button>
+            </div>
+          </div>
+          <p id="games-filter-help" class="small text-body-secondary mt-3 mb-0">Можно искать по названию и одновременно выбирать жанр.</p>
+        </div>
+        <p id="games-results" class="pixel-game-result-count small text-body-secondary mb-3" role="status" aria-live="polite" aria-atomic="true" hidden>
+</p>
+        <div id="games-empty" class="pixel-game-empty card pixel-device-card p-4 mb-4" hidden>
+          <h2 class="h3">Ничего не найдено</h2>
+          <p class="text-body-secondary">Попробуйте другое название или сбросьте поиск и жанр.</p>
+          <button id="games-empty-reset" class="btn btn-outline-light align-self-start" type="button">Сбросить поиск и жанр</button>
+        </div>
+        <noscript>
+<p class="pixel-contact-strip mb-4">Ниже доступен весь список. Назовите выбранную игру при звонке в клуб: <a href="tel:+77753513693">+7 775 351 36 93</a>.</p>
+</noscript>
+        <h2 id="games-heading" class="h4 mb-3">Игры</h2>
+        <ul id="games-list" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 g-md-4 list-unstyled">
+          <li class="col" data-game-id="cs2" data-game-category="shooters" data-game-search="Counter-Strike 2 CS2 CS 2 КС2 КС 2 Counter Strike">
+            <article id="game-1" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/cs2.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Counter-Strike 2</h2>
+              <p class="text-body-secondary small mb-3">Шутер</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=cs2" aria-label="Выбрать для визита: Counter-Strike 2">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="fortnite" data-game-category="battle-royale" data-game-search="Fortnite Фортнайт">
+            <article id="game-2" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/fortnite.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Fortnite</h2>
+              <p class="text-body-secondary small mb-3">Королевская битва</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=fortnite" aria-label="Выбрать для визита: Fortnite">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="minecraft" data-game-category="sandbox" data-game-search="Minecraft Майнкрафт">
+            <article id="game-3" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/minecraft.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Minecraft</h2>
+              <p class="text-body-secondary small mb-3">Песочница</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=minecraft" aria-label="Выбрать для визита: Minecraft">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="dota2" data-game-category="moba" data-game-search="Dota 2 Dota2 Дота Дота2 Дота 2">
+            <article id="game-4" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/dota2.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Dota 2</h2>
+              <p class="text-body-secondary small mb-3">Командная стратегия (MOBA)</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=dota2" aria-label="Выбрать для визита: Dota 2">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="valorant" data-game-category="shooters" data-game-search="Valorant Валорант">
+            <article id="game-5" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art game-art-logo" src="assets/games/valorant.webp" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Valorant</h2>
+              <p class="text-body-secondary small mb-3">Тактический шутер</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=valorant" aria-label="Выбрать для визита: Valorant">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="gtav" data-game-category="action" data-game-search="GTA V GTA 5 ГТА ГТА 5 Grand Theft Auto">
+            <article id="game-6" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/gtav.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">GTA V</h2>
+              <p class="text-body-secondary small mb-3">Экшен</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=gtav" aria-label="Выбрать для визита: GTA V">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="gtaonline" data-game-category="action" data-game-search="GTA Online GTA Онлайн ГТА Онлайн Grand Theft Auto">
+            <article id="game-7" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/gtav.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">GTA Online</h2>
+              <p class="text-body-secondary small mb-3">Экшен</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=gtaonline" aria-label="Выбрать для визита: GTA Online">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="pubg" data-game-category="battle-royale" data-game-search="PUBG Пабг">
+            <article id="game-8" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/pubg.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">PUBG</h2>
+              <p class="text-body-secondary small mb-3">Королевская битва</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=pubg" aria-label="Выбрать для визита: PUBG">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="apex" data-game-category="battle-royale" data-game-search="Apex Legends Apex Апекс">
+            <article id="game-9" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/apex.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Apex Legends</h2>
+              <p class="text-body-secondary small mb-3">Королевская битва</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=apex" aria-label="Выбрать для визита: Apex Legends">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="lol" data-game-category="moba" data-game-search="League of Legends LoL Лига Легенд ЛОЛ">
+            <article id="game-10" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art game-art-logo" src="assets/games/lol.webp" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">League of Legends</h2>
+              <p class="text-body-secondary small mb-3">Командная стратегия (MOBA)</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=lol" aria-label="Выбрать для визита: League of Legends">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="rust" data-game-category="sandbox" data-game-search="Rust Раст">
+            <article id="game-11" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/rust.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Rust</h2>
+              <p class="text-body-secondary small mb-3">Выживание</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=rust" aria-label="Выбрать для визита: Rust">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="roblox" data-game-category="sandbox" data-game-search="Roblox Роблокс">
+            <article id="game-12" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art game-art-logo" src="assets/games/roblox.svg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Roblox</h2>
+              <p class="text-body-secondary small mb-3">Песочница</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=roblox" aria-label="Выбрать для визита: Roblox">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="fc" data-game-category="sports-simulation" data-game-search="EA Sports FC FC FIFA ФИФА">
+            <article id="game-13" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art game-art-logo" src="assets/games/fc.svg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">EA Sports FC</h2>
+              <p class="text-body-secondary small mb-3">Спорт</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=fc" aria-label="Выбрать для визита: EA Sports FC">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="cod" data-game-category="shooters" data-game-search="Call of Duty COD Кол оф Дьюти">
+            <article id="game-14" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/cod.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Call of Duty</h2>
+              <p class="text-body-secondary small mb-3">Шутер</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=cod" aria-label="Выбрать для визита: Call of Duty">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="r6" data-game-category="shooters" data-game-search="Rainbow Six Siege R6 Радуга Рейнбоу">
+            <article id="game-15" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/r6.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Rainbow Six Siege</h2>
+              <p class="text-body-secondary small mb-3">Тактический шутер</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=r6" aria-label="Выбрать для визита: Rainbow Six Siege">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="overwatch2" data-game-category="shooters" data-game-search="Overwatch 2 Overwatch2 Овервотч Овервотч 2">
+            <article id="game-16" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/overwatch2.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Overwatch 2</h2>
+              <p class="text-body-secondary small mb-3">Геройский шутер</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=overwatch2" aria-label="Выбрать для визита: Overwatch 2">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="rocketleague" data-game-category="sports-simulation" data-game-search="Rocket League Рокет Лига">
+            <article id="game-17" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/rocketleague.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Rocket League</h2>
+              <p class="text-body-secondary small mb-3">Спорт</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=rocketleague" aria-label="Выбрать для визита: Rocket League">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="warthunder" data-game-category="sports-simulation" data-game-search="War Thunder Вар Тандер Вартандер">
+            <article id="game-18" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/warthunder.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">War Thunder</h2>
+              <p class="text-body-secondary small mb-3">Боевой симулятор</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=warthunder" aria-label="Выбрать для визита: War Thunder">Выбрать для визита</a>
+            </article>
+          </li>
+          <li class="col" data-game-id="ets2" data-game-category="sports-simulation" data-game-search="Euro Truck Simulator 2 ETS2 ETS 2 Евро Трак">
+            <article id="game-19" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art" src="assets/games/ets2.jpg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <h2 class="h3 mb-3">Euro Truck Simulator 2</h2>
+              <p class="text-body-secondary small mb-3">Автосимулятор</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=ets2" aria-label="Выбрать для визита: Euro Truck Simulator 2">Выбрать для визита</a>
+            </article>
+          </li>
+
+        </ul>
+        <section id="apps-section" class="mt-5" aria-labelledby="apps-heading">
+<h2 id="apps-heading" class="h4 mb-3">Приложения</h2>
+<ul id="apps-list" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 list-unstyled">          <li class="col" data-game-id="chrome" data-game-category="apps" data-game-search="Google Chrome Chrome Гугл Хром Браузер">
+            <article id="game-20" class="pixel-game-card card pixel-device-card h-100 p-4">
+              <img class="game-art game-art-logo" src="assets/games/chrome.svg" alt="" width="460" height="215" loading="lazy" decoding="async">
+              <p class="pixel-accent small mb-3">Приложение</p>
+              <h2 class="h3 mb-3">Google Chrome</h2>
+              <p class="text-body-secondary small mb-3">Браузер</p>
+              <a class="pixel-game-action btn btn-outline-light mt-auto" href="booking.html?game=chrome" aria-label="Добавить к пожеланиям: Google Chrome">Добавить к пожеланиям</a>
+            </article>
+          </li>
+</ul>
+</section>
+      </section>
+    </main>
+<footer class="pixel-site-footer" id="contact">
+<div class="container premium-footer">
+<div><a class="pixel-brand" href="index.html">PIXEL<span>_</span></a>
+<p>Место для вашей игры.</p>
+<p class="small">© 2026 Компьютерный клуб Pixel</p>
+</div>
+<div>
+<h2>Заглядывайте в любое время</h2><address>Астана, проспект Мәңгілік Ел, 36</address>
+<p>Круглосуточно, каждый день</p><a href="https://2gis.kz/astana/firm/70000001081269255" target="_blank" rel="noopener noreferrer">Маршрут в 2ГИС <span class="visually-hidden">(новая вкладка)</span></a>
+</div>
+<div>
+<h2>На связи</h2><a class="footer-phone" href="tel:+77753513693">+7 775 351 36 93</a><a href="help.html">Перед первым визитом</a><a href="https://www.instagram.com/pixel.cyberclub/" target="_blank" rel="noopener noreferrer">Instagram <span class="visually-hidden">(новая вкладка)</span></a><a href="mailto:barmal066@gmail.com">barmal066@gmail.com</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
